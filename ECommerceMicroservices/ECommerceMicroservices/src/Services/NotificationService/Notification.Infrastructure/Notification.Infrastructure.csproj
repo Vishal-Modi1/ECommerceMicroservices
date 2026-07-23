@@ -6,4 +6,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Notification.Application\Notification.Application.csproj" />
+    <ProjectReference Include="..\Notification.Domain\Notification.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
