@@ -1,6 +1,33 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
+﻿# Build folders
+**/bin/
+**/obj/
 
-/EcommerceMicroservice/.vs/EcommerceMicroservice/v17
-/.vs
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# NuGet
+*.nupkg
+packages/
+
+# Logs
+*.log
+
+# Test Results
+TestResults/
+
+# Publish
+publish/
+
+# OS files
+.DS_Store
+Thumbs.db
