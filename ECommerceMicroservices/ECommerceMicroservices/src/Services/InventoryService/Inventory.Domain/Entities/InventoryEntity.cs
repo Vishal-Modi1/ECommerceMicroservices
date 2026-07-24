@@ -18,6 +18,7 @@ public class InventoryEntity : BaseEntity
     {
         ProductId = productId;
         AvailableQuantity = quantity;
+        CreatedOnUtc = DateTime.UtcNow;
     }
 
     public void Reserve(int quantity)

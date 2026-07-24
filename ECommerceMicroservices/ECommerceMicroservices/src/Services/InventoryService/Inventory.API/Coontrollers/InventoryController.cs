@@ -1,8 +1,9 @@
-﻿using Inventory.Application.Commands.CreateProduct;
+﻿using Inventory.Application.Commands.CreateInventory;
+using InventoryService.Application.Features.Inventory.Commands.CreateInventory;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace InventoryService.Api.Controllers;
+namespace Inventory.API.Coontrollers;
 
 [ApiController]
 [Route("api/[controller]")]
@@ -24,5 +25,13 @@ public class InventoryController : ControllerBase
         {
             Message = "Inventory reserved successfully."
         });
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create(CreateInventoryCommand command)
+    {
+        var id = await _mediator.Send(command);
+
+        return CreatedAtAction(nameof(Create), new { id }, id);
     }
 }

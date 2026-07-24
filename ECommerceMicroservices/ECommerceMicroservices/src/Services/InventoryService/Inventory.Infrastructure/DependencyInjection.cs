@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Inventory.Domain.Repository;
 using Inventory.Infrastructure.Persistence;
 using Inventory.Infrastructure.Repositories;
+using Inventory.Domain.UnitOfWork;
 
 public static class DependencyInjection
 {
@@ -16,6 +17,7 @@ public static class DependencyInjection
                 configuration.GetConnectionString("DefaultConnection")));
 
         services.AddScoped<IInventoryRepository, InventoryRepository>();
+        services.AddScoped<IUnitOfWork, UnitOfWork>();
 
         return services;
     }

@@ -21,6 +21,10 @@ public class InventoryConfiguration : IEntityTypeConfiguration<InventoryEntity>
         builder.Property(x => x.RowVersion)
             .IsRowVersion();
 
+
+        builder.Property(x => x.CreatedOnUtc)
+            .IsRequired();
+
         builder.HasIndex(x => x.ProductId)
             .IsUnique();
     }

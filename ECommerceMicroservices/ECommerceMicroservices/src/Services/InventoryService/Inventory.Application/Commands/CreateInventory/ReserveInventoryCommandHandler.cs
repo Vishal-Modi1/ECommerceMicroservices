@@ -2,7 +2,7 @@
 using Inventory.Domain.UnitOfWork;
 using MediatR;
 
-namespace Inventory.Application.Commands.CreateProduct;
+namespace Inventory.Application.Commands.CreateInventory;
 
 public class ReserveInventoryCommandHandler : IRequestHandler<ReserveInventoryCommand>
 {
